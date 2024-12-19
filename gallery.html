@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog - Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        
+        .mySlides {
+            display: none;
+            width: 60%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="travel_tips.html">Travel Tips</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2 style="text-align: center;">Photo Gallery</h2>
+    <main>
+        <img src="https://viewghana.com/wp-content/uploads/2021/05/Aburi_botanical_Gardens.jpg" alt="Aburi Botanical Gardens" class="mySlides">
+        <img src="https://cdn.destguides.com/files/store/itinerarystop/41675/background_image/webp_medium_202112291737-4c15c8e678c08dd60ff49422e6ed50d1.webp" alt="Kakum National Park" class="mySlides">
+        <img src="https://cdn.destguides.com/files/store/itinerarystop/41676/background_image/webp_medium_202112291737-13c8c0cce81de8dc7e6d42a3c42fdfad.webp" alt="Boti Falls" class="mySlides">
+        <img src="https://cdn.thecrazytourist.com/wp-content/uploads/2016/06/Labadi-Beach.jpg" alt="Labadi Pleasure Beach" class="mySlides">
+        <img src="https://th.bing.com/th/id/OIP.xiaRQSp1XVV1RhNHop9P4wHaE0?w=262&h=180&c=7&r=0&o=5&pid=1.7.jpg" alt="Cape Coast Castle" class="mySlides">
+    </main>
+    <footer>
+        <p>&copy; 2024 My Travel Blog</p>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 5000); // Change image every 3 seconds
+        }
+    </script>
+</body>
+</html>
+
